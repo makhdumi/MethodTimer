@@ -10,7 +10,7 @@ public static class Verifier
     {
         var before = Validate(beforeAssemblyPath);
         var after = Validate(afterAssemblyPath);
-        var message = $"Failed processing {Path.GetFileName(afterAssemblyPath)}\r\n{after}";
+        var message = string.Format("Failed processing {Path.GetFileName(afterAssemblyPath)}\r\n{0}", after);
         Assert.AreEqual(TrimLineNumbers(before), TrimLineNumbers(after), message);
     }
 

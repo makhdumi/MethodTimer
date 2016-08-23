@@ -18,7 +18,7 @@ public class InheritedClassDoingPropertyCall : BaseClass
     {
     }
 
-    static string Property => "aaa";
+    static string Property { get { return "aaa"; } }
 }
 [Time]
 public class InheritedClassDoingConstructionCall : BaseClass
@@ -28,13 +28,14 @@ public class InheritedClassDoingConstructionCall : BaseClass
     {
     }
 
-    static string Property => "aaa";
+    static string Property { get { return "aaa"; } }
 }
 
 public class SomeOtherClass
 {
-    public string Instance => "aaa";
-    public static string Static => "aaa";
+    public string Instance { get { return "aaa"; } }
+
+    public static string Static { get { return "aaa"; } }
 }
 
 public class BaseClass

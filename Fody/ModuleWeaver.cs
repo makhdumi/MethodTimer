@@ -36,7 +36,7 @@ public partial class ModuleWeaver
         FindInterceptor();
         if (LogMethodIsNop)
         {
-            LogDebug($"'{LogMethod.FullName}' is a Nop so skipping weaving");
+            LogDebug(string.Format("'{0}' is a Nop so skipping weaving", LogMethod.FullName));
             RemoveAttributes();
             RemoveReference();
             return;
